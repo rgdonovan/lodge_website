@@ -1,10 +1,8 @@
 import { useState } from "react";
-import { useNavigate } from "react-router";
 import icon from "../images/logo/github.svg";
 import logo from "../images/logo/Lodge_graphic_mono_color.svg";
 
 function Nav() {
-  const navigate = useNavigate();
   const [showMenu, setShowMenu] = useState(false);
   const navItemStyle = "pl-4 hover:bg-gray-100 hover:border-gray-300 active:bg-green-200 active:border-green-300 border-l-4 border-white py-2.5";
 
@@ -15,11 +13,11 @@ function Nav() {
           <img src={logo} alt="the Lodge logo" className="h-20 ml-8" />
         </a>
         <nav className="hidden lg:flex bg-white h-full justify-between items-center text-center text-lg text-gray-500 font-medium">
-          <a href="#start-here" className="mx-4">Start Here</a>
+          <a href="#landing" className="mx-4">Start Here</a>
           <a href="#case-study" className="mx-4">Case Study</a>
           <a href="#presentation" className="mx-4">Presentation</a>
           <a href="#our-team" className="mx-4">Our Team</a>
-          <button className="mx-4" onClick={() => navigate("/docs")}>Docs</button>
+          <a href="/docs" className="mx-4">Docs</a>
           <a href="https://github.com/lodge-cli" className="mx-4 w-20"><img src={icon} className="w-full h-10 " alt="The github logo" /></a>
         </nav>
         <div className="lg:hidden block">
